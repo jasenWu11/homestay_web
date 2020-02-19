@@ -1,0 +1,25 @@
+.order_list_panel {
+	width: 100%;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 15px 0px;
+}
+
+.order_table {
+	background-color: #FFFFFF;
+	padding: 15px;
+}
+
+.order_table tbody tr {
+	border-style: solid;
+	border-width: 2px;
+	border-color: #EEEEEE;
+	padding: 15px;
+}
+
+.order_list_img {
+	width: 100px;
+	margin: auto;
+}

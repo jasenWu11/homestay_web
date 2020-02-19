@@ -1,0 +1,366 @@
+.detail_panel {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0px;
+}
+
+.main_panel {
+	width: 70%;
+	height: 100%;
+	padding: 0px 40px;
+	box-sizing: border-box;
+}
+
+.top_panel {
+	display: flex;
+	align-items: center;
+}
+
+.top_panel .left_panel {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.left_panel .left_top_panel {
+	font-size: 18px;
+	color: #777777;
+	font-weight: 500;
+}
+
+.left_panel .left_bottom_panel {
+	font-size: 16px;
+	color: #999999;
+	margin-top: 10px;
+}
+
+.top_panel .right_panel {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	color: #000000;
+	font-size: 20px;
+	font-weight: 500;
+}
+
+.line {
+	width: 100%;
+	height: 1px;
+	background-color: #bbbbbb;
+	margin: 26px 0px;
+}
+
+.house_view {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.house_list_view .house_view .collect_image {
+	width: 60px;
+	height: 60px;
+	z-index: 2;
+	position: relative;
+	margin-bottom: -80px;
+	margin-left: 590px;
+}
+
+.slide-box .house_view {
+	width: 304px;
+	display: flex;
+	margin-bottom: 0px;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.slide-box .house_view .collect_image {
+	width: 40px;
+	height: 40px;
+	z-index: 999;
+	position: relative;
+	margin-bottom: -50px;
+	margin-left: 244px;
+	box-sizing: border-box;
+}
+
+.house_view .name_distance_panel {
+	margin: 10px 0px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 18px;
+	font-family: SimSun;
+	color: #000000;
+}
+
+.name_distance_panel .house_name {
+	font-size: 18px;
+	font-family: SimSun;
+	color: #19896f;
+	flex: 1;
+}
+
+.name_distance_panel .distance_text {
+	font-size: 28px;
+	font-family: SimSun;
+	color: #19896f;
+}
+
+.house_view .house_view_image{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.house_view_image .house_image {
+	width: 50%;
+	border-radius: 5px;
+}
+
+.house_view .specification_text {
+	font-size: 16px;
+	font-family: SimSun;
+	margin-top: 10px;
+}
+
+.house_view .introduce_text {
+	font-size: 16px;
+	font-family: SimSun;
+	margin: 10px 0px;
+	text-overflow: -o-ellipsis-lastline;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	box-sizing: border-box;
+}
+
+.house_view .row_view {
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.row_view .praise_view {
+	font-size: 24px;
+	font-family: SimSun;
+}
+
+.row_view .image_star {
+	width: 24px;
+	height: 24px;
+}
+
+.row_view .price {
+	font-size: 26px;
+	font-family: SimSun;
+	flex: 1;
+}
+
+.address_panel {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding: 0px 40px;
+	box-sizing: border-box;
+	align-items: center;
+}
+
+.address_panel .address_view {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+}
+
+.evaluation_tip {
+	height: 80px;
+	color: #000000;
+	font-size: 34px;
+	font-weight: 500;
+	display: flex;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+}
+
+.star_panel {
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	align-items: center;
+	justify-content: space-between;
+	margin: 15px 0px 20px 0px;
+}
+
+.star_view {
+	width: 70px;
+	height: 70px;
+}
+
+.weui-demo-dialog {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.weui-half-screen-dialog {
+	transition: all .3s;
+	transform: translateY(100%);
+}
+
+.weui-demo-dialog_show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.weui-demo-dialog_show .weui-half-screen-dialog {
+	transform: translateY(0);
+}
+
+.user_info_panel {
+	width: 100%;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+}
+
+.user_info_panel .base_info {
+	display: flex;
+	align-items: center;
+}
+
+.base_info .user_head {
+	width: 80px;
+	height: 80px;
+	border-radius: 40px;
+}
+
+.base_info .username_text {
+	font-size: 18px;
+	color: #000000;
+	flex: 1;
+	margin-left: 20px;
+}
+
+.base_info .time_text {
+	font-size: 16px;
+	color: #aaaaaa;
+}
+
+.user_info_panel .score_text {
+	color: #000000;
+	font-size: 16px;
+	margin: 5px 0px 5px 10px;
+}
+
+.user_info_panel .evaluation_text {
+	font-size: 16px;
+	color: #000000;
+	margin: 5px 0px 5px 10px;
+}
+
+
+.date_panel {
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+}
+
+.line_nomargin {
+	width: 100%;
+	height: 1px;
+	background-color: #cccccc;
+}
+
+.date_panel .date_view {
+	flex: 1;
+	display: flex;
+	margin: 20px 0px;
+}
+
+.date_view .date_item_view {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex: 1;
+}
+
+.date_item_view .date_top_text {
+	color: #999999;
+	font-size: 18px;
+}
+
+.date_item_view .date_middle_text {
+	color: #000000;
+	font-size: 16px;
+}
+
+.date_item_view .date_bottom_text {
+	color: #999999;
+	font-size: 18px;
+}
+
+.date_view .middle_view {
+	display: flex;
+	background-color: #ffffff;
+	box-sizing: border-box;
+	flex-direction: column;
+	align-items: center;
+}
+
+.line_vertical {
+	flex: 1;
+	width: 1px;
+	background-color: #cccccc;
+}
+
+.middle_view .day_count_view {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-width: 0.5px;
+	border-style: solid;
+	border-color: #cccccc;
+	border-radius: 20px;
+	font-size: 16px;
+	padding: 2px 16px;
+}
+
+.title_text {
+	color: #000000;
+	font-size: 22px;
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+
+.pay_info {
+	margin-top: 30px;
+}
+
+.price_panel {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	color: #000000;
+}
+
+.order_info {
+	margin-top: 20px;
+	color: #999999;
+	font-size: 16px;
+	display: flex;
+	flex-direction: column;
+}

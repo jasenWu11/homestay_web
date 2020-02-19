@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>房间详情</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/bootstrapold.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/getUrlParam.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/house_deatil.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="divport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script charset="utf-8" src="https://map.qq.com/api/gljs?v=1.exp&key=VXYBZ-DZE6O-BCXWL-SC434-WJXQ7-WCFFK"></script>
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!--fonts-->
+		<!--//fonts-->
+		<!-- start menu -->
+		<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="js/memenu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".memenu").memenu();
+			});
+		</script>
+		<script src="js/simpleCart.min.js"> </script>
+		<script src="js/template-web.js" type="text/javascript" charset="utf-8"> </script>
+		<script src="js/imagezoom.js"></script>
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="facebok"> </i></a></li>
+							<li><a href="#"><i class="twiter"> </i></a></li>
+							<li><a href="#"><i class="inst"> </i></a></li>
+							<li><a href="#"><i class="goog"> </i></a></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="head-top">
+					<div class="logo">
+						<h1><a href="index.html">优质民宿房东端</a></h1>
+					</div>
+					<div class=" h_menu4">
+						<ul class="memenu skyblue">
+							<li><a class="color8" href="index.html">主页</a></li>
+							<li><a class="color2" href="house_list.html">我的房源</a></li>
+							<li><a class="color4" href="add_house.html">增加房源</a></li>
+							<li><a class="color6" href="message.html">我的消息</a></li>
+							<li><a class="color6" href="order_list.html">订单列表</a></li>
+						</ul>
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- grow -->
+		<div class="grow">
+			<div class="container">
+				<h2>房源详情</h2>
+			</div>
+		</div>
+		<!-- grow -->
+		<div class="product">
+			<div class="container">
+
+				<div class="product-price1">
+					<div class="top-sing">
+						<div class="col-md-7 house_deatil-top">
+							<div id="flexslider" class="flexslider"></div>
+							<script type="images/html" id="image_tem">
+								<ul  class="slides">
+								    {{each image_json.houseimage}}
+								        <li data-thumb="{{$value.url}}">
+								            	<div class="thumb-image"> <img src="{{$value.url}}" data-imagezoom="true" class="img-responsive"> </div>
+								        </li>
+								    {{/each}}
+								</ul>
+							</script>
+							<div class="clearfix"> </div>
+							<!-- slide -->
+
+
+							<!-- FlexSlider -->
+							<script defer src="js/jquery.flexslider.js"></script>
+							<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+						</div>
+						<div class="col-md-5 house_deatil-top-in simpleCart_shelfItem">
+							<div class="house_deatil-para ">
+								<h4 id="house_name">房源名称</h4>
+								<div class="star-on">
+
+									<div class="score_collect_star">
+										<label id="score_text">1</label> 评分
+										<div id="star_panel" class="row_view" style="margin-left: 10px;"></div>
+										<script type="star_list/html" id="star_list_tem">
+											{{each star_json.star_list}}
+											    <image class="image_star" src="{{$value.url}}"></image>
+											{{/each}}
+										</script>
+									</div>
+									<label id="collect_text" style="margin-top: 5px;"> 1 </label> 收藏
+									<div class="clearfix"> </div>
+								</div>
+								<div id="people_text" class="people_text">
+									房间规格：3房2厅，最多可居住人数：3位
+								</div>
+								<h5 class="item_price">￥ <label id="price_text">500.00</label></h5>
+								<p id="house_desc" class="house_desc_text"> </p>
+								<!-- <div class="available">
+									<ul>
+										<li>Color
+											<select>
+												<option>Silver</option>
+												<option>Black</option>
+												<option>Dark Black</option>
+												<option>Red</option>
+											</select></li>
+										<li class="size-in">Size<select>
+												<option>Large</option>
+												<option>Medium</option>
+												<option>small</option>
+												<option>Large</option>
+												<option>small</option>
+											</select></li>
+										<div class="clearfix"> </div>
+									</ul>
+								</div> -->
+								<label style="display: flex;align-items: center;"><input id="disable_switch" class="mui-switch mui-switch-animbg"
+									 type="checkbox">下架房源</label>
+
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+					<!---->
+
+					<div class=" bottom-product">
+						<div class="tip_panel">
+							<text class="title_text">便捷设备</text>
+						</div>
+						<div id="device_panel" class="device_panel"></div>
+						<script type="device_html/html" id="devices_tem">
+							<div class="slide-box">
+							    {{each device_json.device_data}}
+							        <div class="slide-item">
+							        	<div class="device_item">
+							        		<image class="icon_view" src="{{$value.url}}"></image>
+							        		<text class="device_text">{{$value.devicename}}</text>
+							        	</div>
+							        </div>
+							    {{/each}}
+							</div>
+						</script>
+						<div class="tip_panel">
+							<text class="title_text">房源位置</text>
+						</div>
+						<div class="address_panel">
+							<div id="container" class="map_panel"></div>
+							<div class="address_view">
+								<p class="address_text" id="address_text"></p>
+							</div>
+						</div>
+						<div class="tip_panel">
+							<text class="title_text" id="evaluate_count">评价(0)条</text>
+						</div>
+						<div id="evaluation_panel" class="evaluation_panel" hidden="{{hidden_evaluate}}"></div>
+						<script type="evaluation/html" id="evaluation_tem">
+							{{each evaluates.evaluate_list}}
+							        <div class="evaluation_item">
+							            <div class="info_view">
+							            	<img class="user_head" src="{{$value.userImage}}"></img>
+							            	<div class="text_view">
+							            		<div class="username_text">{{$value.nickname}}</div>
+							            	</div>
+							            </div>
+							            <div class="bubbleTail"></div>
+							            <div class="user_info_panel">
+							            	<div class="base_info">
+							            		<div id="star_panel_list" class="row_view">
+													{{each $value.star_list}}
+														<image class="image_star" src="{{$value.url}}"></image>
+													{{/each}}
+												</div>
+							            		<div class="time_text">{{$value.evaluateTime}}</div>
+							            	</div>
+							            	<div class="score_text">{{$value.score}}分</div>
+							            	<div class="evaluation_text">{{$value.evaluatetext}}</div>
+							            </div>
+							        </div>
+							{{/each}}
+						</script>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<!--//content-->
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-at">
+		
+					<div class="col-md-3 amet-sed">
+						<h4>帮助信息</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">怎么发布房源信息？</a></li>
+							<li><a href="#">怎么盈利</a></li>
+							<li><a href="tencent://message/?uin=1252279088&Site=sc.chinaz.com&Menu=yes">联系我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">更多帮助</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>请详细发布</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">房源名称</a></li>
+							<li><a href="#">房源规格</a></li>
+							<li><a href="#">房源位置</a></li>
+							<li><a href="#">真实的房源图片</a></li>
+							<li><a href="#">详细的设备配置</a></li>
+						</ul>
+		
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>留下您的联系方式</h4>
+						<div class="stay">
+							<div class="stay-left">
+								<form>
+									<input type="text" placeholder="输入您的邮箱地址 " required="">
+								</form>
+							</div>
+							<div class="btn-1">
+								<form>
+									<input type="submit" value="Subscribe">
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+		
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>联系我们</h4>
+						<p>如果您有任何需求</p>
+						<p>请致电我们</p>
+						<p>联系方式 : +8615625527280</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-class">
+				<p>Copyright &copy; 2020.Company name All rights reserved.More Templates <a href="http://www.baidu.com/" target="_blank"
+					 title="方俊茂">方俊茂</a> - Collect from <a href="http://www.baidu.com/" title="方俊茂" target="_blank">方俊茂</a></p>
+			</div>
+		</div>
+		<script>
+			var my_id = '';
+			var ip_address = '';
+			var house_id = '';
+			// Can also be used with $(document).ready()
+			$(window).load(function() {
+				house_id = UrlParm.parm("house_id");
+				console.log('接到的id是' + house_id)
+				my_id = getCookie('my_id')
+				ip_address = getCookie('ip_address')
+				getroom_detail()
+			});
+
+			function getroom_detail() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/house/host/info.do?Id=" + house_id,
+					type: "post",
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var data = result.data;
+							var house_info = data.house;
+							var evaluate_list = data.evaluate;
+							var houseimage = house_info.houseimage;
+							var device_data = data.device;
+							var disabled = house_info.disabled;
+							if (disabled == true) {
+								console.log('被禁用');
+								$('#disable_switch').attr("checked", true);
+							} else {
+								console.log('没被禁用');
+								$('#disable_switch').attr("checked", false);
+							}
+							var device_json = {}
+							device_json['device_data'] = device_data
+							var device_html = template('devices_tem', {
+								device_json: device_json
+							})
+							var device_panel = document.querySelector('#device_panel');
+							device_panel.innerHTML = device_html;
+							var housescore = house_info.housescore;
+							if (housescore > 5) {
+								housescore = housescore / 20
+							}
+							houseimage = JSON.parse(houseimage);
+							var image_json = {}
+							image_json['houseimage'] = houseimage
+							var images_html = template('image_tem', {
+								image_json: image_json
+							})
+							var flexslider = document.querySelector('#flexslider');
+							flexslider.innerHTML = images_html;
+							$('.flexslider').flexslider({
+								animation: "slide",
+								controlNav: "thumbnails"
+							});
+							console.log('图片列表' + JSON.stringify(image_json))
+							for (var eva in evaluate_list) {
+								var score = evaluate_list[eva].score
+								var star_list = set_star_list(score)
+								evaluate_list[eva]['star_list'] = star_list
+							}
+							console.log('整理后' + JSON.stringify(evaluate_list))
+							var evaluates = {}
+							evaluates['evaluate_list'] = evaluate_list
+							var evaluate_html = template('evaluation_tem', {
+								evaluates: evaluates
+							})
+							var evaluation_panel = document.querySelector('#evaluation_panel');
+							evaluation_panel.innerHTML = evaluate_html;
+							set_star_list(housescore);
+							$('#house_name').text(house_info.housename)
+							$('#score_text').text(house_info.housescore)
+							$('#collect_text').text(data.collectCount)
+							$('#price_text').text(house_info.houseprice)
+							$('#house_desc').text(house_info.housedesc)
+							$('#address_text').text(house_info.address)
+							$('#people_text').text('房间规格：' + house_info.specification + '，最多可居住人数：' + house_info.housepeople + '位')
+							var evaluate_count = evaluate_list.length
+							$('#evaluate_count').text('评价(' + evaluate_count + ')条')
+							var longitude = house_info.longitude;
+							var latitude = house_info.latitude
+							console.log(latitude + longitude)
+							var center = new TMap.LatLng(latitude, longitude); //设置中心点坐标
+							//初始化地图
+							var map = new TMap.Map("container", {
+								center: center
+							});
+							//初始化marker
+							var marker = new TMap.MultiMarker({
+								id: "marker-layer", //图层id
+								map: map,
+								styles: { //点标注的相关样式
+									"marker": new TMap.MarkerStyle({
+										"width": 35,
+										"height": 35,
+										"anchor": {
+											x: 16,
+											y: 32
+										},
+										"src": "images/position.png"
+									})
+								},
+								geometries: [{ //点标注数据数组
+									"id": "demo",
+									"styleId": "marker",
+									"position": new TMap.LatLng(latitude, longitude),
+									"properties": {
+										"title": "marker"
+									}
+								}]
+							});
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+
+			function set_star_list(score) {
+				var half_url = "images/icons/star_half.png";
+				var all_url = "images/icons/star_all.png";
+				var star_list = [];
+				var count = parseInt(score / 1);
+				var remainder = score % 1;
+				//console.log('除数是' + count + '，而余数是' + remainder)
+				if (remainder != 0) {
+					var star = {}
+					star.url = half_url;
+					star_list.push(star);
+				}
+				for (var j = 0; j < count; j++) {
+					var star = {}
+					star.url = all_url;
+					star_list.push(star);
+				}
+				console.log('星星数组是' + star_list)
+				var star_json = {}
+				star_json['star_list'] = star_list;
+				var stars_html = template('star_list_tem', {
+					star_json: star_json
+				})
+				var star_panel = document.querySelector('#star_panel');
+				star_panel.innerHTML = stars_html;
+				return star_list;
+			}
+
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+			$("#disable_switch").click(function() {
+				if ($(this).prop("checked")) { //jquery 1.6以前版本 用  $(this).attr("checked")
+					$.ajax({ //传数据的方式
+						url: ip_address + "/house/update.do",
+						data:{
+							id:house_id,
+							disabled:true
+						},
+						type: "post",
+						success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+							console.log('返回了' + JSON.stringify(result))
+							var status = result.status;
+							if (status == 0) {
+								
+							} else {
+								var msg = result.msg;
+								alert(msg)
+							}
+						},
+						error: function(Error) {
+							console.log(Error);
+						},
+						complete: function(xhr, data) {
+							console.log("complete");
+						}
+					});
+				} else {
+					$.ajax({ //传数据的方式
+						url: ip_address + "/house/update.do",
+						data:{
+							id:house_id,
+							disabled:false
+						},
+						type: "post",
+						success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+							console.log('返回了' + JSON.stringify(result))
+							var status = result.status;
+							if (status == 0) {
+								
+							} else {
+								var msg = result.msg;
+								alert(msg)
+							}
+						},
+						error: function(Error) {
+							console.log(Error);
+						},
+						complete: function(xhr, data) {
+							console.log("complete");
+						}
+					});
+				}
+			});
+		</script>
+	</body>
+</html>

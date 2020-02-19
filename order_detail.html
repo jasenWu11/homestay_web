@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>订单详情</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/getUrlParam.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/order_detail.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="divport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!-- start menu -->
+		<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="js/memenu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".memenu").memenu();
+			});
+		</script>
+		<script src="js/simpleCart.min.js"> </script>
+		<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			th {
+				text-align: center;
+				background-color: #EEEEEE;
+				padding: 8px;
+			}
+
+			td {
+				padding: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="facebok"> </i></a></li>
+							<li><a href="#"><i class="twiter"> </i></a></li>
+							<li><a href="#"><i class="inst"> </i></a></li>
+							<li><a href="#"><i class="goog"> </i></a></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="head-top">
+					<div class="logo">
+						<h1><a href="index.html">优质民宿房东端</a></h1>
+					</div>
+					<div class=" h_menu4">
+						<ul class="memenu skyblue">
+							<li><a class="color8" href="index.html">主页</a></li>
+							<li><a class="color2" href="house_list.html">我的房源</a></li>
+							<li><a class="color4" href="add_house.html">增加房源</a></li>
+							<li><a class="color6" href="message.html">我的消息</a></li>
+							<li><a class="color6" href="order_list.html">订单列表</a></li>
+						</ul>
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="grow">
+			<div class="container">
+				<h2>订单详情</h2>
+			</div>
+		</div>
+		<div class="detail_panel">
+			<div class="main_panel">
+				<div class="house_view" style="margin-right:30rpx;">
+					<div class="house_view_image">
+						<image id="house_image" class="house_image" mode='widthFix' bindtap="tohouse_deatil" data-hid="{{order_data.hosue.id}}"
+						 data-hname="{{order_data.hosue.housename}}" data-price="{{order_data.hosue.houseprice}}"></image>
+					</div>
+					<div class="name_distance_panel">
+						<text id="house_name" class="house_name">{{order_data.hosue.housename}}</text>
+					</div>
+					<text id="house_desc" class="introduce_text">{{order_data.hosue.housedesc}}</text>
+					<text class="specification_text">独立房间-<text id="specification"></text>-<text id="housepeople"></text>人</text>
+					<text id="houseprice" class="specification_text"></text>
+				</div>
+				<div class="line"></div>
+				<div class="top_panel">
+					<div class="left_panel">
+						<text id="status_text" class="left_top_panel"></text>
+						<text class="left_bottom_panel">
+							<a href="javascript:tochat()" id="nickname"></a><br />
+							<text id="starttime"></text><br />
+							<text id="endtime"></text><br />
+							<text id="day"></text><br />
+							<text id="liveCount"></text><br />
+					</div>
+					<div class="right_panel order_price">￥{{order_data.order.orderprice}}</div>
+				</div>
+				<div id="evaluate_line" class="line"></div>
+				<div id="evaluate_panel" class="user_info_panel">
+					<text class="title_text">用户评价</text>
+					<div class="base_info">
+						<image id="userImage" class="user_head"></image>
+						<text id="nickname" class="username_text"></text>
+						<text id="evaluateTime" class="time_text"></text>
+					</div>
+					<text class="score_text"><text id="score" >{{evaluate.score}}</text><text style="font-size:24rpx;">分</text></text>
+					<text id="evaluatetext" class="evaluation_text">{{evaluate.evaluatetext}}</text>
+				</div>
+				<div class="date_panel">
+					<div class="line_nomargin"></div>
+					<div class="date_view">
+						<div class="date_item_view">
+							<text class="date_top_text">入住日期</text>
+							<text id="startdate" class="date_middle_text"></text>
+							<text class="date_bottom_text">14:00后</text>
+						</div>
+						<div class="middle_view">
+							<div class="line_vertical"></div>
+							<text class="day_count_view">1晚</text>
+							<div class="line_vertical"></div>
+						</div>
+						<div class="date_item_view">
+							<text class="date_top_text">离开日期</text>
+							<text id="enddate"  class="date_middle_text">{{order_data.order.enddate_text}}</text>
+							<text class="date_bottom_text">12:00前</text>
+						</div>
+					</div>
+					<div class="line_nomargin"></div>
+				</div>
+				<div class="pay_info">
+					<div class="title_text">付款信息</div>
+					<div class="price_panel">
+						<text style="flex:1;">房费</text>
+						<text class="order_price" style="color:#da7b10;"></text>
+					</div>
+				</div>
+				<div class="line"></div>
+				<div class="title_text">订单信息</div>
+				<div class="order_info">
+					<text>订单号码：<text id="order_id" style="color:#000000;"></text></text>
+					<text>订单时间：<text id="order_time" style="color:#000000;">{{order_data.order.ordertime}}</text></text>
+				</div>
+				<button class="weui-btn" type="primary" style="width:100%;margin-top:30rpx;" hidden="{{pay_hidden}}" bindtap="showInputLayer">支付订单</button>
+				<button class="weui-btn" type="default" style="width:100%;margin-top:30rpx;" hidden="{{canel_hidden}}" bindtap="canel_order">取消订单</button>
+				<button id="cancel_order" type="button" class="btn btn-danger btn-lg btn-block" style="margin-top: 20px;" onclick="cancel_order()">取消订单(请先联系租客)</button>
+				<button type="button" class="btn btn-primary btn-lg btn-block" style="margin-top: 20px;" onclick="contact_server()">联系客服</button>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-at">
+		
+					<div class="col-md-3 amet-sed">
+						<h4>帮助信息</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">怎么发布房源信息？</a></li>
+							<li><a href="#">怎么盈利</a></li>
+							<li><a href="tencent://message/?uin=1252279088&Site=sc.chinaz.com&Menu=yes">联系我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">更多帮助</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>请详细发布</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">房源名称</a></li>
+							<li><a href="#">房源规格</a></li>
+							<li><a href="#">房源位置</a></li>
+							<li><a href="#">真实的房源图片</a></li>
+							<li><a href="#">详细的设备配置</a></li>
+						</ul>
+		
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>留下您的联系方式</h4>
+						<div class="stay">
+							<div class="stay-left">
+								<form>
+									<input type="text" placeholder="输入您的邮箱地址 " required="">
+								</form>
+							</div>
+							<div class="btn-1">
+								<form>
+									<input type="submit" value="Subscribe">
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+		
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>联系我们</h4>
+						<p>如果您有任何需求</p>
+						<p>请致电我们</p>
+						<p>联系方式 : +8615625527280</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-class">
+				<p>Copyright &copy; 2020.Company name All rights reserved.More Templates <a href="http://www.baidu.com/" target="_blank"
+					 title="方俊茂">方俊茂</a> - Collect from <a href="http://www.baidu.com/" title="方俊茂" target="_blank">方俊茂</a></p>
+			</div>
+		</div>
+		<script type="application/x-javascript">
+			var order_id = '';
+			var hostid = getCookie('my_id');
+			var ip_address = getCookie('ip_address')
+			var userid = ''
+			var nickname = ''
+			$(document).ready(function() {
+				order_id = UrlParm.parm("order_id");
+				console.log('接到的id是' + order_id)
+				my_id = getCookie('my_id')
+				ip_address = getCookie('ip_address')
+				getuserinfo();
+				get_order_detail()
+			});
+
+			function get_order_detail() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/order/info.do?id=" + order_id,
+					type: "post",
+					data: {
+						id: hostid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var datas = result.data;
+							var house_data = datas.hosue;
+							var housename = house_data.housename;
+							var housedesc = house_data.housedesc;
+							var specification = house_data.specification;
+							var housepeople = house_data.housepeople;
+							var houseprice = house_data.houseprice;
+							console.log(house_data)
+							var houseimage = house_data.houseimage
+							var first_image = '';
+							if (houseimage != null && houseimage.length != 0) {
+								first_image = JSON.parse(houseimage)[0];
+								$('#house_image').attr('src', first_image.url);
+							}
+							$('#house_name').text("房源名称：" + housename);
+							$('#house_desc').text("房源描述：" + housedesc);
+							$('#houseprice').text("房源价格：￥" + houseprice+' 每天(当天14:00-隔天12:00,节假日有波动)');
+							$('#specification').text(specification);
+							$('#housepeople').text(housepeople);
+							var order_data = datas.order;
+							var status = order_data.orderstatus;
+							var starttime = order_data.starttime;
+							var endtime = order_data.endtime;
+							var day = order_data.day;
+							var status_text = ''
+							console.log('订单状态' + status)
+							if (status == 0) {
+							    status_text = '订单待支付'
+							    var nowtime = getFormatDate();
+							    var endtimes = formatDate2(endtime)
+							    var state = new Date(endtimes) - new Date(nowtime);
+							    if (state <= 0) {
+							        status_text = '订单已失效'
+									$("#cancel_order").css('display','none');//隐藏
+							    }
+							} else if (status == 1) {
+							    status_text = '订单已完成'
+							    var nowtime = getFormatDate();
+							    var starttimes = formatDate2(starttime)
+							    var state = new Date(nowtime) - new Date(starttimes);
+							    if (state <= 0) {
+							        status_text = '订单待入住'
+							    }else{
+									$("#cancel_order").css('display','none');//隐藏
+								}
+							} else if (status == 2) {
+							    status_text = '订单已取消'
+								$("#cancel_order").css('display','none');//隐藏
+							}
+							$('#status_text').text("订单状态：" + status_text);
+							$('#starttime').text("入住时间：" + starttime);
+							$('#endtime').text("离店时间：" + endtime);
+							$('#day').text('居住天数：'+day+'天');
+							var liveCount = datas.liveCount;
+							$('#liveCount').text('租客人数：'+liveCount+'人');
+							var order_price = order_data.orderprice;
+							$('.order_price').text('￥'+order_price);
+							var startdate = formatDate(starttime);
+							var enddate = formatDate(endtime);
+							$('#startdate').text(startdate);
+							$('#enddate').text(enddate);
+							var order_id = order_data.id;
+							var order_time = order_data.ordertime;
+							$('#order_id').text(order_id);
+							$('#order_time').text(order_time);
+							
+							if(datas.hasOwnProperty("evaluate")){
+								var evaluate_data = datas.evaluate;
+								console.log('有评价')
+								var userImage = evaluate_data.userImage;
+								var nickname = evaluate_data.nickname;
+								var evaluateTime = evaluate_data.evaluateTime;
+								var evaluatetext = evaluate_data.evaluatetext;
+								var score = evaluate_data.score;
+								$('#userImage').attr('src', userImage);
+								$('#nickname').text(nickname);
+								$('#evaluatetext').text(evaluatetext);
+								$('#evaluateTime').text(evaluateTime);
+								$('#score').text(score);
+							}else{
+								console.log('无评价')
+								$("#evaluate_line").css('display','none');//隐藏
+								$("#evaluate_panel").css('display','none');//隐藏
+							}
+							// var order_list_json = {}
+							// order_list_json['order_list_data'] = order_list_data
+							// var order_list_html = template('order_list_tem', {
+							// 	order_list_json: order_list_json
+							// })
+							// var order_list_list = document.querySelector('#order_list_list');
+							// order_list_list.innerHTML = order_list_html;
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+			function getuserinfo(){
+				$.ajax({ //传数据的方式
+					url: ip_address + "/order/admin/info.do?id=" + order_id,
+					type: "post",
+					data: {
+						id: hostid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var datas = result.data;
+							userid = datas.userid;
+							nickname = datas.nickname;
+							$('#nickname').text('租住用户昵称：'+nickname);
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+			function getFormatDate(){
+			    var nowDate = new Date();
+			    var year = nowDate.getFullYear();
+			    var month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
+			    var date = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate.getDate();
+			    var hour = nowDate.getHours()< 10 ? "0" + nowDate.getHours() : nowDate.getHours();
+			    var minute = nowDate.getMinutes()< 10 ? "0" + nowDate.getMinutes() : nowDate.getMinutes();
+			    var second = nowDate.getSeconds()< 10 ? "0" + nowDate.getSeconds() : nowDate.getSeconds();
+			    return year + "-" + month + "-" + date+" "+hour+":"+minute+":"+second;
+			}
+			function formatDate(dates) { //设置时间转换格式
+				var date = new Date(dates)
+				var y = date.getFullYear();  //获取年
+				var m = date.getMonth() + 1;  //获取月
+				m = m < 10 ? '0' + m : m;  //判断月是否大于10
+				var d = date.getDate();  //获取日
+				d = d < 10 ? ('0' + d) : d;  //判断日期是否大10
+				return y + '年' + m + '月' + d + '日';  //返回时间格式
+			}
+			function formatDate2(dates) { //设置时间转换格式
+				var date = new Date(dates)
+				var y = date.getFullYear();  //获取年
+				var m = date.getMonth() + 1;  //获取月
+				m = m < 10 ? '0' + m : m;  //判断月是否大于10
+				var d = date.getDate();  //获取日
+				d = d < 10 ? ('0' + d) : d;  //判断日期是否大10
+				return y + '-' + m + '-' + d + ' 12:00:00';  //返回时间格式
+			 }
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+			function tochat() {
+				console.log('进入聊天')
+				var channel = userid+'@'+hostid;
+				nickname = nickname;
+				window.location.href='chat.html?channel='+channel+'&nickname='+nickname
+			}
+			function cancel_order(){
+				$.ajax({ //传数据的方式
+					url: ip_address + "/order/cancel.do?",
+					type: "post",
+					data: {
+						id:order_id,
+						userId: userid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							alert('订单已取消')
+							getuserinfo();
+							get_order_detail();
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+			function contact_server(){
+				window.location.href='tencent://message/?uin=1252279088&Site=sc.chinaz.com&Menu=yes'
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,76 @@
+.message_panel{
+	width: 100%;
+	min-height: 500px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.message_list{
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.message_list .message_item{
+  width: 100%;
+  display: flex;
+  box-shadow: 4px 4px 4px 4px #eeeeee;
+  padding: 20px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.message_item .message_head{
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.message_item .message_item_text{
+  flex: 1;
+  margin: 0px 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.message_item_text .name_text {
+  font-size: 18px;
+  font-family: SimSun;
+  color: #414040;
+}
+
+.message_item_text .content_text {
+  font-size: 16px;
+  font-family: SimSun;
+  margin: 5px 0px;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  min-height: 50px;
+}
+
+.message_item_text .time_text {
+  width: 100%;
+  color: #8b8b8b;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.message_item .message_image{
+  width: 150px;
+  height: 100px;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background-color: #8b8b8b;
+  margin: 20px 0px;
+}

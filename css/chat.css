@@ -1,0 +1,310 @@
+* {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    outline: none;
+}
+ 
+html, body {
+    width: 100%;
+    height: 100%;
+	overflow: hidden;
+	background-image:url('../images/chat_back.jpg');
+	background-repeat:no-repeat;
+	-webkit-background-size:100% 100%;
+}
+ 
+.main {
+    height: 90%;
+    width: 50%;
+    margin: auto;
+    box-shadow: 0 0 2px 2px #e1e1e1;
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+	background-color: #FFFFFF;
+}
+ 
+.main .top {
+    width: 100%;
+    height: 60px;
+    background-color: #3bb4f2;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+ 
+.main .top .top-left {
+    height: 100%;
+    width: 200px;
+    float: left;
+    position: relative;
+}
+ 
+.main .top .top-left .header {
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    background-image: url("../images/laugh.png");
+    line-height: 60px;
+    display: inline-block;
+    margin: 6px;
+    border: 1px solid transparent;
+	background-repeat: no-repeat;
+	-moz-background-size:100% 100%;
+	background-size:100% 100%;
+}
+ 
+.main .top .top-left .header:hover {
+    border: 1px solid white;
+}
+ 
+.main .top .top-left .search {
+    display: inline-block;
+    height: 30px;
+    position: absolute;
+    margin: 17px 14px;
+}
+ 
+.main .top .top-left .search input {
+    display: inline-block;
+    width: 110px;
+    height: 30px;
+    border-radius: 40px;
+    border: 1px solid ghostwhite;
+    text-indent: 40px;
+    background-color: #3bb4f2;
+ 
+}
+ 
+.main .top .top-left .search input:hover {
+    border: 1px solid white;
+}
+ 
+.main .top .top-left .search .icon-sear {
+ 
+    background-image: url("../images/search_msg.png");
+    background-size: 100% 100%;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 7px;
+}
+ 
+.main .top .top-type {
+    height: 100%;
+    width: 200px;
+    float: left;
+    margin-left: 200px;
+}
+ 
+.main .top .top-type a.icon-site {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-size: 100% 100%;
+    margin: 10px 11px;
+}
+ 
+.main .top .top-right {
+    height: 100%;
+    width: 200px;
+    float: right;
+}
+ 
+.main .top .top-right i.ic-same {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    background-size: 100% 100%;
+    margin: 19px 7px;
+}
+ 
+.main .top .top-right i.ic-same.ic-menu {
+    margin-left: 48px;
+}
+ 
+ 
+.main .box {
+    width: 100%;
+    flex: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+	display: flex;
+	flex-direction: column;
+}
+ 
+ 
+.main .box .box-right {
+    flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+ 
+.main .box .box-right .recvfrom {
+    width: 100%;
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+}
+ 
+.main .box .box-right .recvfrom .nav-top {
+    height: 45px;
+    width: 100%;
+}
+ 
+.main .box .box-right .recvfrom .nav-top p {
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 25px;
+}
+ 
+.main .box .box-right .recvfrom .news-top {
+    flex: 1;
+    border-top: 1px solid #6C6C6C;
+    border-bottom: 1px solid #6C6C6C;
+    overflow-y: scroll;
+	background-color: #EEEEEE;
+}
+ 
+.main .box .box-right .recvfrom .news-top ul {
+    height: 100%;
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+ 
+li {
+    margin: 10px;
+    min-height: 80px;
+	height:auto;
+    position: relative;
+	display: flex;
+	flex-wrap: wrap;
+}
+ 
+li .avatar img {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+ 
+li .msg {
+    top: -10px;
+    margin: 8px 2px;
+    min-height: 80px;
+	max-width: 60%;
+}
+ 
+li::after {
+    clear: both;
+    content: "";
+    display: inline-block;
+}
+
+li .msg .msg_view{
+	display: flex;
+} 
+
+li .msg .msg_view .msg_img{
+	width: 16px;
+	height: 16px;
+	margin-top: 10px;
+} 
+
+li .msg .msg_view .msg-left-text {
+    border-radius: 5px;
+    padding: 8px;
+	background-color: #fff;
+	flex: 1;
+	margin-left: -5px;
+}
+
+li .msg .msg_view .msg-right-text {
+    border-radius: 5px;
+    padding: 8px;
+	background-color: #3bb4f2;
+	flex: 1;
+	margin-right: -5px;
+}
+ 
+li .msg time {
+    float: right;
+    color: #ccc;
+}
+ 
+li.other{
+ 	display: flex;
+ 	justify-content: flex-start;
+}
+
+li.other .avatar {
+    height: 40px;
+	width: 40px;
+	border-radius: 20px;
+	margin-top: 35px;
+}
+ 
+li.other .msg {
+	display: flex;
+   	justify-content: flex-end;
+   	flex-direction: column;
+}
+li.self{
+	display: flex;
+	justify-content: flex-end;
+}
+li.self .avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+	margin-top: 35px;
+}
+ 
+li.self .msg {
+    display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+ 
+.main .box .box-right .sendto {
+    width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+ 
+ 
+.main .box .box-right .sendto .but-text textarea {
+    border: none;
+    font-size: 22px;
+    padding: 0px 20px;
+    width: 100%;
+    height: 100px;
+	margin-top: 20px;
+}
+ 
+.main .box .box-right .sendto .but-text .button {
+    float: right;
+    padding: 5px 25px;
+    background-color: #3bb4f2;
+	margin: 5px 20px 10px 0px;
+}
+
+.msg-name_left{
+	margin-left: 11px;
+	margin-bottom: 3px;
+	display: flex;
+	justify-content: flex-start;
+}
+.msg-name_right{
+	margin-right: 11px;
+	margin-bottom: 3px;
+	display: flex;
+	justify-content: flex-end;
+}

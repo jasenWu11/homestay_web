@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>house_list</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/bootstrapold.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/bootstrapnew.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/house_list.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!-- start menu -->
+		<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="js/memenu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".memenu").memenu();
+			});
+		</script>
+		<script src="js/simpleCart.min.js"> </script>
+		<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			h1{
+			    font-size: 36px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="facebok"> </i></a></li>
+							<li><a href="#"><i class="twiter"> </i></a></li>
+							<li><a href="#"><i class="inst"> </i></a></li>
+							<li><a href="#"><i class="goog"> </i></a></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="head-top">
+					<div class="logo">
+						<h1><a href="index.html">优质民宿房东端</a></h1>
+					</div>
+					<div class=" h_menu4">
+						<ul class="memenu skyblue">
+							<li><a class="color8" href="index.html">主页</a></li>
+							<li><a class="color2" href="house_list.html">我的房源</a></li>
+							<li><a class="color4" href="add_house.html">增加房源</a></li>
+							<li><a class="color6" href="message.html">我的消息</a></li>
+							<li><a class="color6" href="order_list.html">订单列表</a></li>
+						</ul>
+					</div>
+		
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<!-- house_list -->
+		<!-- grow -->
+		<div class="grow">
+			<div class="container">
+				<h2>我的房源</h2>
+			</div>
+		</div>
+		<!-- grow -->
+		<div class="pro-du" style="min-height: 600px;">
+			<div class="container">
+				<div class="col-md-9 product1">
+					<div id="house_panel" class=" bottom-product"></div>
+					<script type="house_html/html" id="house_tem">
+						{{each house_json.house_data}}
+								<div class="col-md-6 bottom-cd simpleCart_shelfItem">
+									<div class="product-at ">
+										<a href="house_deatil.html?house_id={{$value.id}}"><img class="img-responsive" src="{{$value.first_image.url}}" alt="">
+											<div class="pro-grid">
+												<span class="buy-in">查看房源</span>
+											</div>
+										</a>
+									</div>
+									<p class="tun"><span>{{$value.housename}}</span><br>{{$value.specification}}</p>
+									<div class="ca-rt">
+										<a href="#" class="item_add">
+											<p class="number item_price"><i> </i>￥{{$value.houseprice}}</p>
+										</a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+						{{/each}}
+					</script>
+				</div>
+				<div class="col-md-3 prod-rgt">
+					<div id="card_info" class="card" style="width: 270px;">
+						<div class="card-img-top info_back_panel">
+							<img id="head" src="images/head1.jpg" alt="..." class="img-thumbnail host_head">
+						</div>
+						<div class="card-body">
+							<h5 id="nickname" class="card-title">房东名</h5>
+							<p id="username" class="card-text">账号：</p>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li id="phone" class="list-group-item">联系方式：</li>
+							<li id="housecount" class="list-group-item">房源数量：</li>
+							<li id="likecount" class="list-group-item">获得超赞数：</li>
+							<li id="balance" class="list-group-item">钱包金额：</li>
+							<li id="registertime" class="list-group-item">入驻时间：</li>
+						</ul>
+						<div class="card-body">
+							<a href="javascript:change_my_info(1);" class="card-link">修改个人信息</a>
+							<a href="login.html" class="card-link">注销</a>
+						</div>
+					</div>
+					<div id="card_edit" class="card" style="width: 270px;display:none;">
+						<div class="card-img-top info_back_panel">
+							<img id="head1" src="images/head1.jpg" alt="选择并上传头像" class="img-thumbnail host_head"/>
+							<input type="file" id="avatar_file" name="avatar_file"
+								   accept="image/jpg,image/png,image/gif"
+								   style="opacity: 0;position: absolute;" class="img-thumbnail host_head"/>
+						</div>
+						<div class="card-body">
+							<p id="username1" class="card-text"style="margin-bottom: 10px;">账号：</p>
+							<div style="display: flex;">房东名称：<input id="nickname1" class="form-control" type="text" placeholder="房东名" style="flex: 1;"></div>
+						</div>
+						<ul class="list-group list-group-flush">
+							<li class="list-group-item">
+								<div style="display: flex;">联系方式：<input id="phone1" class="form-control" type="text" placeholder="联系方式" style="flex: 1;"></div>
+							</li>
+							<li class="list-group-item">
+								<div style="display: flex;">修改密码：<input id="password1" class="form-control" type="password" placeholder="输入密码" style="flex: 1;"></div>
+							</li>
+							<li id="housecount1" class="list-group-item">房源数量：</li>
+							<li id="likecount1" class="list-group-item">获得超赞数：</li>
+							<li id="balance1" class="list-group-item">钱包金额：</li>
+							<li id="registertime1" class="list-group-item">入驻时间：</li>
+						</ul>
+						<div class="card-body">
+							<a href="javascript:change_my_info(2);" class="card-link">确定修改</a>
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- house_list -->
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-at">
+		
+					<div class="col-md-3 amet-sed">
+						<h4>帮助信息</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">怎么发布房源信息？</a></li>
+							<li><a href="#">怎么盈利</a></li>
+							<li><a href="tencent://message/?uin=1252279088&Site=sc.chinaz.com&Menu=yes">联系我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">更多帮助</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>请详细发布</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">房源名称</a></li>
+							<li><a href="#">房源规格</a></li>
+							<li><a href="#">房源位置</a></li>
+							<li><a href="#">真实的房源图片</a></li>
+							<li><a href="#">详细的设备配置</a></li>
+						</ul>
+		
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>留下您的联系方式</h4>
+						<div class="stay">
+							<div class="stay-left">
+								<form>
+									<input type="text" placeholder="输入您的邮箱地址 " required="">
+								</form>
+							</div>
+							<div class="btn-1">
+								<form>
+									<input type="submit" value="Subscribe">
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+		
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>联系我们</h4>
+						<p>如果您有任何需求</p>
+						<p>请致电我们</p>
+						<p>联系方式 : +8615625527280</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-class">
+				<p>Copyright &copy; 2020.Company name All rights reserved.More Templates <a href="http://www.baidu.com/" target="_blank"
+					 title="方俊茂">方俊茂</a> - Collect from <a href="http://www.baidu.com/" title="方俊茂" target="_blank">方俊茂</a></p>
+			</div>
+		</div>
+		<script type="application/x-javascript">
+			var hostid = getCookie('my_id');
+			var ip_address = getCookie('ip_address')
+			var head_url = ""
+			$("#avatar_file").change(function () {
+			        // 获取上传文件对象
+			        var file = $(this)[0].files[0];
+			        // 读取文件URL
+			        var reader = new FileReader();
+			        reader.readAsDataURL(file);
+			        send(file);
+			        reader.onload = function () {
+			            // 读取的URL结果：this.result
+			            $("#head1").attr("src", this.result);
+			        }
+			    });
+			$(document).ready(function() {
+				gethouse_list()
+				gethost_data()
+			});
+
+			function gethouse_list() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/house/host/list.do",
+					type: "post",
+					data: {
+						userId: hostid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var house_data = result.data.data;
+							for (var i in house_data) {
+								house_data[i].first_image = JSON.parse(house_data[i].houseimage)[0]
+							}
+							var house_json = {}
+							house_json['house_data'] = house_data
+							var house_html = template('house_tem', {
+								house_json: house_json
+							})
+							var house_panel = document.querySelector('#house_panel');
+							house_panel.innerHTML = house_html;
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+
+			function gethost_data() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/user/info.do",
+					type: "post",
+					data: {
+						id: hostid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							var host_data = result.data
+							$("#head").attr("src", host_data.head);
+							$("#nickname").text(host_data.nickname);
+							$("#phone").text('联系方式：' + host_data.phone);
+							$("#balance").text('钱包金额：' + host_data.balance);
+							$("#likecount").text('获得超赞数：' + host_data.likecount);
+							$("#registertime").text('入驻时间：' + host_data.registertime);
+							$("#username").text('账号：' + host_data.username);
+							$("#housecount").text('房源数量：' + host_data.houseCount);
+							
+							$("#head1").attr("src", host_data.head);
+							$("#nickname1").val(host_data.nickname);
+							$("#phone1").val(host_data.phone);
+							$("#balance1").text('钱包金额：' + host_data.balance);
+							$("#likecount1").text('获得超赞数：' + host_data.likecount);
+							$("#registertime1").text('入驻时间：' + host_data.registertime);
+							$("#username1").text('账号：' + host_data.username);
+							$("#housecount1").text('房源数量：' + host_data.houseCount);
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+			
+			function change_my_info(type) {
+				console.log("修改个人信息"+type);
+				if(type==1){
+					$("#card_info").css('display','none');//隐藏
+					$("#card_edit").css('display','block');//显示
+				}else{
+					var new_name = $('#nickname1').val()
+					var new_password = $('#password1').val()
+					var new_phone = $('#phone1').val()
+					if(new_name==""||new_password==""||new_phone==""){
+						alert("数据不能为空");
+					}else{
+						var datas = {}
+						datas['id']=hostid;
+						datas['nickname']=new_name;
+						datas['phone']=new_phone;
+						datas['password']=new_password;
+						if(head_url!=""){
+							datas['head']=head_url;
+						}
+						$.ajax({ //传数据的方式
+							url: ip_address + "/user/update.do",
+							type: "post",
+							data: datas,
+							success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+								console.log('返回了' + JSON.stringify(result))
+								var status = result.status;
+								if (status == 0) {
+									gethost_data();
+									$("#card_info").css('display','block');//隐藏
+									$("#card_edit").css('display','none');//显示
+									head_url = ""
+								} else {
+									var msg = result.msg;
+									alert(msg)
+								}
+							},
+							error: function(Error) {
+								console.log(Error);
+							},
+							complete: function(xhr, data) {
+								console.log("complete");
+							}
+						});
+					}
+				}
+			}
+			function send(files) {
+				var formData = new FormData();
+				formData.append('image', files);
+				$.ajax({
+					url: ip_address + '/common/upload.do',
+					data: formData,
+					type: 'post',
+					processData: false, // 告诉jQuery不要去处理发送的数据
+					contentType: false, // 告诉jQuery不要去设置Content-Type请求头
+					success: function(result) {
+						console.log(JSON.stringify(result));
+						var status = result.status;
+						if (status == 0) {
+							var data = result.data;
+							var url = data.url;
+							alert('上传成功')
+							console.log('图片链接' + JSON.stringify(url))
+							head_url = url
+						} else {
+							alert('上传失败')
+						}
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

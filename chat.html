@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chat</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/getUrlParam.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/chat.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="divport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+
+			function to_bottom() {
+				var ele = document.getElementById('msg_panel');
+				ele.scrollTop = ele.scrollHeight;
+			}
+		</script>
+		<!--fonts-->
+		<!--//fonts-->
+		<!-- start menu -->
+		<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="js/memenu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".memenu").memenu();
+			});
+		</script>
+		<script src="js/simpleCart.min.js"> </script>
+		<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="main">
+			<div class="top">
+				<div class="top-left">
+					<div class="header"></div>
+				</div>
+				<div class="top-type">
+					<a href="#" class="news icon-site"></a>
+					<a href="#" class="friend icon-site"></a>
+					<a href="#" class="file icon-site"></a>
+				</div>
+				<div class="top-right">
+					<i class="ic-menu ic-same"></i>
+					<i class="ic-shrink ic-same"></i>
+					<i class="ic-boost ic-same"></i>
+					<i class="ic-close ic-same"></i>
+				</div>
+			</div>
+			<div class="box">
+				<div class="box-right">
+					<div class="recvfrom">
+						<div class="nav-top">
+							<p id="nickname">昵称</p>
+						</div>
+						<div id="msg_panel" class="news-top"></div>
+						<script type="chat_html/html" id="chat_tem">
+							{{each chat_json.chat_data}}
+								{{if $value.myid ==$value.recipientid}}
+									<li class="other">
+										<img class="avatar" img src="{{$value.senderHead}}" alt=""></img>
+										<div class="msg">
+											<p class="msg-name_left">{{$value.senderName}}</p>
+											<div class="msg_view">
+												<input type="image" class="msg_img" src="images/left_msg.png" />
+												<p class="msg-left-text">{{$value.content}}</p>
+											</div>
+										</div>
+									</li>
+								{{else}}
+									<li class="self">
+										<div class="msg">
+											<p class="msg-name_right">{{$value.senderName}}</p>
+											<div class="msg_view">
+												<p class="msg-right-text">{{$value.content}}</p>
+												<input type="image" class="msg_img" src="images/right_msg.png" />
+											</div>
+										</div>
+										<img class="avatar" src="{{$value.senderHead}}" alt=""></img>
+									</li>
+								{{/if}}
+							{{/each}}
+						</script>
+					</div>
+					<div class="sendto">
+						<div class="but-text">
+							<textarea name="" id="chat_content" cols="110" rows="6" style="font-size: 14px;"></textarea>
+							<button onclick='send_chat()' type="button" class="button" style="color: #ffffff;">发送</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="application/x-javascript">
+			var hostid = getCookie('my_id');
+			var ip_address = getCookie('ip_address')
+			var channel = ''
+			var nickname = ''
+			var other = ''
+			var other_name = ''
+			$(document).ready(function() {
+				channel = UrlParm.parm("channel");
+				nickname = UrlParm.parm("nickname");
+				other_name = UrlParm.parm("nickname");
+				other = channel.split('@')[0];
+				console.log('接到的通道是' + channel + '，昵称是' + nickname)
+				$('#nickname').text(nickname)
+				getchat_list(channel)
+			});
+
+			function getchat_list(channel) {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/chat/info.do",
+					type: "post",
+					data: {
+						channel: channel
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var chat_data = result.data
+							for(var i in chat_data){
+								chat_data[i].myid = hostid
+							}
+							var chat_json = {}
+							chat_json['chat_data'] = chat_data
+							var chat_html = template('chat_tem', {
+								chat_json: chat_json
+							})
+							var msg_panel = document.querySelector('#msg_panel');
+							msg_panel.innerHTML = chat_html;
+							to_bottom();
+						}else{
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+			
+			function send_chat(){
+				var content = $('#chat_content').val();
+				console.log('发送的消息是'+content);
+				add_chat(content)
+			}
+			
+			function add_chat(content){
+				$.ajax({ //传数据的方式
+					url: ip_address + "/chat/create.do",
+					type: "post",
+					data: {
+						channel: channel,
+						senderid: hostid,
+						recipientid: other,
+						content: content
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							getchat_list(channel)
+							$('#chat_content').val('')
+						}else{
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+		</script>
+	</body>
+</html>

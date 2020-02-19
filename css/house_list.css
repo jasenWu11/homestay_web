@@ -1,0 +1,14 @@
+.info_back_panel{
+	width: 270px;
+	height: 180px;
+	background-image:url('../images/back_img.jpg');
+	background-repeat:no-repeat;
+	-webkit-background-size:100% 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.host_head{
+	height: 80px;
+	width: 80px;
+}

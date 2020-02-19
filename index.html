@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!-- start menu -->
+		<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="js/memenu.js"></script>
+		<script>$(document).ready(function(){$(".memenu").memenu();});</script>
+		<script src="js/simpleCart.min.js"> </script>
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="facebok"> </i></a></li>
+							<li><a href="#"><i class="twiter"> </i></a></li>
+							<li><a href="#"><i class="inst"> </i></a></li>
+							<li><a href="#"><i class="goog"> </i></a></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="head-top">
+					<div class="logo">
+						<h1><a href="index.html">优质民宿房东端</a></h1>
+					</div>
+					<div class=" h_menu4">
+						<ul class="memenu skyblue">
+							<li><a class="color8" href="index.html">主页</a></li>
+							<li><a class="color2" href="house_list.html">我的房源</a></li>
+							<li><a class="color4" href="add_house.html">增加房源</a></li>
+							<li><a class="color6" href="message.html">我的消息</a></li>
+							<li><a class="color6" href="order_list.html">订单列表</a></li>
+						</ul>
+					</div>
+
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="banner">
+			<div class="container">
+				<script src="js/responsiveslides.min.js"></script>
+				<script>
+					$(function () {
+					  $("#slider").responsiveSlides({
+						auto: true,
+						nav: true,
+						speed: 500,
+						namespace: "callbacks",
+						pager: true,
+					  });
+					});
+				  </script>
+				<div id="top" class="callbacks_container">
+					<ul class="rslides" id="slider">
+						<li>
+
+							<div class="banner-text">
+								<h3>优质民宿房东端 </h3>
+								<p>在这里，您可以分享您的闲置房源，出租给需要的租客，方便别人，收益颇多。</p>
+
+							</div>
+
+						</li>
+						<li>
+
+							<div class="banner-text">
+								<h3>舒心体验 </h3>
+								<p>我们设置了多平台多端交互合作出租平台，请您有需要时与客服及用户交流，实现交流促进合作</p>
+
+
+							</div>
+
+						</li>
+						<li>
+							<div class="banner-text">
+								<h3>安全卫生注意</h3>
+								<p>由于近期的新型管状病毒影响，请各位房东注意房源卫生与自身的健康安全，对房源、租客进行小心接待，记得戴好口罩哦</p>
+
+
+							</div>
+
+						</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+		<div class="copyrights">Collect from <a href="http://www.cssmoban.com/">企业网站模板</a></div>
+		<!--content-->
+		<div class="container">
+			<div class="cont">
+				<div class="charts_content">
+					<div class="content-top-bottom">
+						<h2>数据统计</h2>
+						<div style="display: flex;justify-content: center;">
+							<div id="order_status" style="width: 1000px;height:400px;"></div>
+						</div>
+						<div style="display: flex;justify-content: center;">
+							<div id="order_trad" style="width: 1000px;height:400px;"></div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</div>
+				<!----->
+			</div>
+			<!---->
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-at">
+
+					<div class="col-md-3 amet-sed">
+						<h4>帮助信息</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">怎么发布房源信息？</a></li>
+							<li><a href="#">怎么盈利</a></li>
+							<li><a href="tencent://message/?uin=1252279088&Site=sc.chinaz.com&Menu=yes">联系我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">更多帮助</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>请详细发布</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">房源名称</a></li>
+							<li><a href="#">房源规格</a></li>
+							<li><a href="#">房源位置</a></li>
+							<li><a href="#">真实的房源图片</a></li>
+							<li><a href="#">详细的设备配置</a></li>
+						</ul>
+
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>留下您的联系方式</h4>
+						<div class="stay">
+							<div class="stay-left">
+								<form>
+									<input type="text" placeholder="输入您的邮箱地址 " required="">
+								</form>
+							</div>
+							<div class="btn-1">
+								<form>
+									<input type="submit" value="Subscribe">
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>联系我们</h4>
+						<p>如果您有任何需求</p>
+						<p>请致电我们</p>
+						<p>联系方式 : +8615625527280</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-class">
+				<p>Copyright &copy; 2020.Company name All rights reserved.More Templates <a href="http://www.baidu.com/" target="_blank"
+					 title="方俊茂">方俊茂</a> - Collect from <a href="http://www.baidu.com/" title="方俊茂" target="_blank">方俊茂</a></p>
+			</div>
+		</div>
+		<script type="application/x-javascript">
+			var order_id = '';
+			var hostid = getCookie('my_id');
+			var ip_address = getCookie('ip_address')
+			var userid = ''
+			var nickname = ''
+			$(document).ready(function() {
+				ip_address = getCookie('ip_address')
+				getorder_status();
+				getorder_trad()
+			});
+
+			function getorder_status() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/order/status/month.do",
+					type: "post",
+					data: {
+						year: '2020',
+						hostId: hostid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var datas = result.data;
+							var length = Object.keys(datas).length;
+							console.log('长度是'+length)
+							var un_pay = [];
+							var seccess = [];
+							var cancel = [];
+							for(var i = 0;i<length;i++){
+								console.log('数据'+JSON.stringify(datas[i+1]))
+								seccess.push(datas[i+1][0])
+								un_pay.push(datas[i+1][1])
+								cancel.push(datas[i+1][2]) 
+							}
+							for(var i = 0;i<12;i++){
+								if(un_pay.length<12){
+									un_pay.push(null)
+								}else{
+									break;
+								}
+							}
+							for(var i = 0;i<12;i++){
+								if(seccess.length<12){
+									seccess.push(null)
+								}else{
+									break;
+								}
+							}
+							for(var i = 0;i<12;i++){
+								if(cancel.length<12){
+									cancel.push(null)
+								}else{
+									break;
+								}
+							}
+							console.log('未支付'+JSON.stringify(un_pay))
+							console.log('有效'+JSON.stringify(seccess))
+							console.log('已取消'+JSON.stringify(cancel))
+							var myChart = echarts.init(document.getElementById('order_status'));
+							
+							option = {
+								title: {
+								        text: '今年订单状态统计(份)'
+								},
+							    color: ['#66ccff', '#66ccaa', '#e5323e'],
+							    tooltip: {
+							        trigger: 'axis',
+							        axisPointer: {
+							            type: 'shadow'
+							        }
+							    },
+								tooltip: {
+									trigger: 'axis'
+								},
+							    legend: {
+							        data: ['未支付订单', '有效订单', '已取消订单']
+							    },
+							    toolbox: {
+							        show: true,
+							        orient: 'vertical',
+							        left: 'right',
+							        top: 'center',
+							        feature: {
+							            mark: {show: true},
+							            dataView: {show: true, readOnly: false},
+							            magicType: {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+							            restore: {show: true},
+							            saveAsImage: {show: true}
+							        }
+							    },
+							    xAxis: [
+							        {
+							            type: 'category',
+							            axisTick: {show: false},
+							            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+							        }
+							    ],
+							    yAxis: [
+							        {
+							            type: 'value'
+							        }
+							    ],
+							    series: [
+							        {
+							            name: '未支付订单',
+							            type: 'bar',
+							            barGap: 0,
+							            data: un_pay
+							        },
+							        {
+							            name: '有效订单',
+							            type: 'bar',
+							            data: seccess
+							        },
+							        {
+							            name: '已取消订单',
+							            type: 'bar',
+							            data: cancel
+							        }
+							    ]
+							};
+							// 使用刚指定的配置项和数据显示图表。
+							myChart.setOption(option);
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+
+			function getorder_trad() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/order/trad/month.do",
+					type: "post",
+					data: {
+						year: '2020',
+						hostId: hostid
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var datas = result.data;
+							var length = Object.keys(datas).length;
+							console.log('长度是'+length)
+							var trad_data = [];
+							for(var i = 0;i<length;i++){
+								console.log('数据'+JSON.stringify(datas[i+1]))
+								trad_data.push(datas[i+1])
+							}
+							for(var i = 0;i<12;i++){
+								if(trad_data.length<12){
+									trad_data.push(null)
+								}else{
+									break;
+								}
+							}
+							console.log('数据是'+JSON.stringify(trad_data))
+							var myChart = echarts.init(document.getElementById('order_trad'));
+							option = {
+								title: {
+								        text: '今年收益额状态统计(￥)'
+								},
+								tooltip: {
+									trigger: 'axis'
+								},
+							    xAxis: {
+							        type: 'category',
+							        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+							    },
+							    yAxis: {
+							        type: 'value'
+							    },
+							    series: [{
+							        data: trad_data,
+							        type: 'line',
+							        smooth: true
+							    }]
+							};
+							myChart.setOption(option);
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+		</script>
+	</body>
+</html>

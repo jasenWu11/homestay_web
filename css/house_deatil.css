@@ -1,0 +1,411 @@
+.device_panel {
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	overflow-x: auto;
+}
+
+.device_panel .device_item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.device_item .icon_view {
+	width: 40px;
+	height: 40px;
+}
+
+.device_item .device_text {
+	margin-top: 5px;
+	font-size: 16px;
+	color: #2c2c2c;
+}
+
+.tip_panel {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 25px 0px;
+}
+
+.tip_panel .title_text {
+	color: #000;
+	font-size: 18px;
+}
+
+.tip_panel .to_text {
+	color: #888;
+	font-size: 18px;
+}
+
+.landlord_info_panel {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 30px;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 3px 3px #eeeeee;
+	border-radius: 5px;
+}
+
+.landlord_info_panel .info_view {
+	display: flex;
+	flex-direction: row;
+}
+
+.info_view .info_image {
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+}
+
+.info_view .text_view {
+	display: flex;
+	flex-direction: column;
+	margin-left: 14px;
+	justify-content: center;
+}
+
+.text_view .name_text {
+	font-size: 14px;
+	color: #000;
+	margin-bottom: 20px;
+}
+
+.text_view .room_count_text {
+	font-size: 14px;
+	color: #2c2c2c;
+}
+
+.landlord_info_panel .room_info_view {
+	background-color: #eee;
+	padding: 10px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+}
+
+.room_info_view .room_info_text {
+	color: #2c2c2c;
+	width: 100%;
+	font-size: 26px;
+	font-family: SimSun;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.address_panel {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 1px 1px 3px 3px #eeeeee;
+	border-radius: 5px;
+	padding-bottom: 20px;
+	overflow: auto;
+}
+
+.address_panel .map_panel {
+	width: 100%;
+	height: 350px;
+	margin-bottom: 20px;
+	border-radius: 15px 15px 0 0;
+}
+
+.address_panel .address_view {
+	margin: 0px 20px;
+	display: flex;
+	align-items: center;
+}
+
+.address_text {
+	color: #000;
+	font-size: 18px;
+	flex: 1;
+}
+
+.address_view .next_text {
+	color: #888;
+	font-size: 40px;
+}
+
+.address_view .distance_text {
+	color: #aaa;
+	font-size: 16px;
+}
+
+.address_view .copy_text {
+	color: #099;
+	font-size: 28px;
+	margin-left: 15px;
+}
+
+.evaluation_panel {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 3px 3px #eeeeee;
+	border-radius: 5px;
+	padding: 30px;
+}
+
+.evaluation_panel .evaluation_item {
+	display: flex;
+	flex-direction: column;
+	box-sizing: border-box;
+	margin: 5px 0px 5px 0px;
+}
+
+.evaluation_item .info_view {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+}
+
+.info_view .score_text {
+	font-size: 14px;
+	color: #000;
+	margin-bottom: 10px;
+}
+
+.row_view {
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+}
+
+.image_star {
+	width: 18px;
+	height: 18px;
+}
+
+.bubbleTail {
+	width: 40px;
+	height: 22px;
+	border-width: 0;
+	border-style: solid;
+	border-color: transparent;
+	margin-top: 6px;
+	margin-bottom: -3px;
+	border-left-width: 15px;
+	border-left-color: currentColor;
+	border-radius: 62px 0 0 0;
+	color: #eee;
+	margin-left: 20px;
+}
+
+.user_info_panel {
+	width: 100%;
+	border-radius: 10px;
+	background-color: #eee;
+	display: flex;
+	flex-direction: column;
+	padding: 20px 30px;
+	box-sizing: border-box;
+}
+
+.user_info_panel .base_info {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.user_head {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+}
+
+.base_info .username_text {
+	font-size: 14px;
+	color: #000000;
+	flex: 1;
+}
+
+.base_info .time_text {
+	font-size: 14px;
+	color: #aaaaaa;
+}
+
+.user_info_panel .score_text {
+	color: #000000;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.user_info_panel .evaluation_text {
+	font-size: 14px;
+	color: #000000;
+	margin-top: 5px;
+}
+
+.security_panel {
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+	box-shadow: 1px 1px 3px 3px #eeeeee;
+	border-radius: 5px;
+	padding: 20px;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.security_panel .security_icon {
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+}
+
+.security_panel .security_text {
+	font-size: 14px;
+	color: #000000;
+}
+
+.security_panel .security_tip_text {
+	font-size: 14px;
+	color: #bbbbbb;
+	flex: 1;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.slide-box {
+	display: -webkit-box;
+	overflow-x: scroll;
+	-webkit-overflow-scrolling: touch;
+	margin-top: 10px;
+}
+
+/* 隐藏下方的滚动条 */
+
+.slide-box::-webkit-scrollbar {
+	background-color: transparent;
+}
+
+.slide-box {
+	-ms-overflow-style: none;
+}
+
+.slide-box {
+	overflow: -moz-scrollbars-none;
+}
+
+.slide-item {
+	width: 100px;
+}
+
+
+.weui-demo-dialog {
+	visibility: hidden;
+	opacity: 0;
+}
+
+.weui-demo-dialog_show {
+	visibility: visible;
+	opacity: 1;
+}
+
+.score_collect_star {
+	display: flex;
+	align-items: center;
+}
+
+.house_desc_text {
+	word-wrap: break-word;
+	word-break: break-all;
+	overflow: hidden;
+}
+
+.people_text {
+	color: #000000;
+	font-size: 14px;
+}
+
+.mui-switch {
+	width: 52px;
+	height: 31px;
+	position: relative;
+	border: 1px solid #dfdfdf;
+	background-color: #fdfdfd;
+	box-shadow: #dfdfdf 0 0 0 0 inset;
+	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-clip: content-box;
+	display: inline-block;
+	-webkit-appearance: none;
+	user-select: none;
+	outline: none;
+}
+
+.mui-switch:before {
+	content: '';
+	width: 29px;
+	height: 29px;
+	position: absolute;
+	top: 0px;
+	left: 0;
+	border-radius: 20px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.mui-switch:checked {
+	border-color: #64bd63;
+	box-shadow: #64bd63 0 0 0 16px inset;
+	background-color: #64bd63;
+}
+
+.mui-switch:checked:before {
+	left: 21px;
+}
+
+.mui-switch.mui-switch-animbg {
+	transition: background-color ease 0.4s;
+}
+
+.mui-switch.mui-switch-animbg:before {
+	transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-animbg:checked {
+	box-shadow: #dfdfdf 0 0 0 0 inset;
+	background-color: #64bd63;
+	transition: border-color 0.4s, background-color ease 0.4s;
+}
+
+.mui-switch.mui-switch-animbg:checked:before {
+	transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-anim {
+	transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s;
+}
+
+.mui-switch.mui-switch-anim:before {
+	transition: left 0.3s;
+}
+
+.mui-switch.mui-switch-anim:checked {
+	box-shadow: #64bd63 0 0 0 16px inset;
+	background-color: #64bd63;
+	transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s;
+}
+
+.mui-switch.mui-switch-anim:checked:before {
+	transition: left 0.3s;
+}

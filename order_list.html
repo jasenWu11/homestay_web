@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>order_list</title>
+		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="js/jquery.min.js"></script>
+		<!-- Custom Theme files -->
+		<!--theme-style-->
+		<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+		<link href="css/order_list.css" rel="stylesheet" type="text/css" media="all" />
+		<!--//theme-style-->
+		<meta name="divport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Mattress Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+		<script type="application/x-javascript">
+			addEventListener("load", function() {
+				setTimeout(hideURLbar, 0);
+			}, false);
+
+			function hideURLbar() {
+				window.scrollTo(0, 1);
+			}
+		</script>
+		<!-- start menu -->
+		<link href="css/memenu.css" rel="stylesheet" type="text/css" media="all" />
+		<script type="text/javascript" src="js/memenu.js"></script>
+		<script>
+			$(document).ready(function() {
+				$(".memenu").memenu();
+			});
+		</script>
+		<script src="js/simpleCart.min.js"> </script>
+		<script src="js/template-web.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			th {
+			    text-align: center;
+				background-color: #EEEEEE;
+				padding: 8px; 
+			}
+			td{
+				padding: 8px; 
+			}
+		</style>
+	</head>
+	<body>
+		<!--header-->
+		<div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="social">
+						<ul>
+							<li><a href="#"><i class="facebok"> </i></a></li>
+							<li><a href="#"><i class="twiter"> </i></a></li>
+							<li><a href="#"><i class="inst"> </i></a></li>
+							<li><a href="#"><i class="goog"> </i></a></li>
+							<div class="clearfix"></div>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="head-top">
+					<div class="logo">
+						<h1><a href="index.html">优质民宿房东端</a></h1>
+					</div>
+					<div class=" h_menu4">
+						<ul class="memenu skyblue">
+							<li><a class="color8" href="index.html">主页</a></li>
+							<li><a class="color2" href="house_list.html">我的房源</a></li>
+							<li><a class="color4" href="add_house.html">增加房源</a></li>
+							<li><a class="color6" href="message.html">我的消息</a></li>
+							<li><a class="color6" href="order_list.html">订单列表</a></li>
+						</ul>
+					</div>
+		
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+		<div class="grow">
+			<div class="container">
+				<h2>订单列表</h2>
+			</div>
+		</div>
+		<div id="order_list_panel" class="order_list_panel">
+			<table width="1224" border="0" align="center" cellpadding="8" cellspacing="0" class="order_table">
+			      <tbody id="order_list_list" class="order_list_list"></tbody>
+				  <script type="order_list_html/html" id="order_list_tem">
+					 <tr>
+					    <th width="64"></th>
+					    <th style="text-align: left;">民宿名称</th>
+					    <th width="100" align="center">用户</th>
+					    <th width="120" align="center">入住时间</th>
+					    <th width="120" align="center">离店时间</th>
+						<th width="120" align="center">签订时间</th>
+					    <th width="80" align="center">入住天数</th>
+					    <!--<th width="80" align="center">优惠</th>-->
+					    <th width="100" align="center">价格</th>
+					    <th width="100" align="center">状态</th>
+					  </tr>
+				  	{{each order_list_json.order_list_data}}
+				  		<div onClick="window.location.href='chat.html?channel={{$value.channel}}&nickname={{$value.nickname}}'" class="order_list_item">
+				  		  <tr>
+				  		    <td><a target="_blank" href="order_detail.html?order_id={{$value.id}}"><img src="{{$value.first_image.url}}" class="order_list_img"></a></td>
+				  		    <td><a target="_blank" href="house_deatil.html?house_id={{$value.houseid}}">{{$value.housename}}</a></td>
+				  		      
+				  		    <!--颜色-->
+				  		    <td align="center">{{$value.nickname}}<input name="goods_color" type="hidden" value="{{$value.nickname}}"></td>
+				  		  			
+				  		      <!--积分-->       
+				  		    <td align="center">{{$value.starttime}}</td>
+				  		    <!--价格-->
+				  		    <td align="center">{{$value.endtime}}</td><!-- value=用户价格 -->
+							<td align="center">{{$value.ordertime}}</td>
+				  		    <!--数量-->
+				  		    <td align="center">{{$value.day}}天</td>
+				  		    <td align="center"><font color="#FF0000" size="2">￥<label name="real_amount">{{$value.orderprice}}</label></font></td>
+				  		    <td align="center">{{$value.status_text}}</td>
+				  		  </tr>
+				  		</div>
+				  	{{/each}}
+				  </script></table>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="footer-top-at">
+		
+					<div class="col-md-3 amet-sed">
+						<h4>帮助信息</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">怎么发布房源信息？</a></li>
+							<li><a href="#">怎么盈利</a></li>
+							<li><a href="tencent://message/?uin=1252279088&Site=sc.chinaz.com&Menu=yes">联系我们</a></li>
+							<li><a href="#">关于我们</a></li>
+							<li><a href="#">更多帮助</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>请详细发布</h4>
+						<ul class="nav-bottom">
+							<li><a href="#">房源名称</a></li>
+							<li><a href="#">房源规格</a></li>
+							<li><a href="#">房源位置</a></li>
+							<li><a href="#">真实的房源图片</a></li>
+							<li><a href="#">详细的设备配置</a></li>
+						</ul>
+		
+					</div>
+					<div class="col-md-3 amet-sed">
+						<h4>留下您的联系方式</h4>
+						<div class="stay">
+							<div class="stay-left">
+								<form>
+									<input type="text" placeholder="输入您的邮箱地址 " required="">
+								</form>
+							</div>
+							<div class="btn-1">
+								<form>
+									<input type="submit" value="Subscribe">
+								</form>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+		
+					</div>
+					<div class="col-md-3 amet-sed ">
+						<h4>联系我们</h4>
+						<p>如果您有任何需求</p>
+						<p>请致电我们</p>
+						<p>联系方式 : +8615625527280</p>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="footer-class">
+				<p>Copyright &copy; 2020.Company name All rights reserved.More Templates <a href="http://www.baidu.com/" target="_blank"
+					 title="方俊茂">方俊茂</a> - Collect from <a href="http://www.baidu.com/" title="方俊茂" target="_blank">方俊茂</a></p>
+			</div>
+		</div>
+		<script type="application/x-javascript">
+			var hostid = getCookie('my_id');
+			var ip_address = getCookie('ip_address')
+			$(document).ready(function() {
+				getorder_list()
+			});
+
+			function getorder_list() {
+				$.ajax({ //传数据的方式
+					url: ip_address + "/order/admin/list.do",
+					type: "post",
+					data: {
+						hostId: hostid,
+						pageIndex:1,
+						pageSize:500
+					},
+					success: function(result, textStatus, request) { //传数据成功之后的操作   result是servlet传过来的数据  这个函数对result进行处理，让它显示在 输入框中
+						console.log('返回了' + JSON.stringify(result))
+						var status = result.status;
+						if (status == 0) {
+							console.log('返回正确')
+							var order_list_data = result.data.data;
+							if (order_list_data != null) {
+							    for (var i = 0; i < order_list_data.length; i++) {
+							        var status = order_list_data[i].orderstatus;
+							        var status_text = '';
+							        if (status == 0) {
+							            status_text = '订单待支付'
+							            var nowtime = getFormatDate();
+							            var endtimes = formatDate2(order_list_data[i].endtime)
+							            var state = new Date(endtimes) - new Date(nowtime);
+							            if (state <= 0) {
+							                status_text = '订单已失效'
+							            }
+							        } else if (status == 1) {
+							            status_text = '订单已完成'
+							            var nowtime = getFormatDate();
+							            var starttimes = formatDate2(order_list_data[i].starttime)
+							            var state = new Date(nowtime) - new Date(starttimes);
+							            if (state <= 0) {
+							                status_text = '订单待入住'
+							            }
+							        } else if (status == 2) {
+							            status_text = '订单已取消'
+									}
+							        order_list_data[i].status_text = status_text;
+							        order_list_data[i].startdate = formatDate(order_list_data[i].starttime)
+							        order_list_data[i].enddate = formatDate(order_list_data[i].endtime)
+									if(order_list_data[i].houseimage!=null&&order_list_data[i].houseimage.length!=0){
+										order_list_data[i].first_image = JSON.parse(order_list_data[i].houseimage)[0]
+									}else{
+										order_list_data[i].first_image['url'] = './images/back_img.jpg'
+									}
+							    }
+							}
+							var order_list_json = {}
+							order_list_json['order_list_data'] = order_list_data
+							
+							var order_list_html = template('order_list_tem', {
+								order_list_json: order_list_json
+							})
+							var order_list_list = document.querySelector('#order_list_list');
+							order_list_list.innerHTML = order_list_html;
+						} else {
+							var msg = result.msg;
+							alert(msg)
+						}
+					},
+					error: function(Error) {
+						console.log(Error);
+					},
+					complete: function(xhr, data) {
+						console.log("complete");
+					}
+				});
+			}
+			function getFormatDate(){
+			    var nowDate = new Date();
+			    var year = nowDate.getFullYear();
+			    var month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1) : nowDate.getMonth() + 1;
+			    var date = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate.getDate();
+			    var hour = nowDate.getHours()< 10 ? "0" + nowDate.getHours() : nowDate.getHours();
+			    var minute = nowDate.getMinutes()< 10 ? "0" + nowDate.getMinutes() : nowDate.getMinutes();
+			    var second = nowDate.getSeconds()< 10 ? "0" + nowDate.getSeconds() : nowDate.getSeconds();
+			    return year + "-" + month + "-" + date+" "+hour+":"+minute+":"+second;
+			}
+			function formatDate(dates) { //设置时间转换格式
+				var date = new Date(dates)
+				var y = date.getFullYear();  //获取年
+				var m = date.getMonth() + 1;  //获取月
+				m = m < 10 ? '0' + m : m;  //判断月是否大于10
+				var d = date.getDate();  //获取日
+				d = d < 10 ? ('0' + d) : d;  //判断日期是否大10
+				return y + '年' + m + '月' + d + '日';  //返回时间格式
+			}
+			function formatDate2(dates) { //设置时间转换格式
+				var date = new Date(dates)
+				var y = date.getFullYear();  //获取年
+				var m = date.getMonth() + 1;  //获取月
+				m = m < 10 ? '0' + m : m;  //判断月是否大于10
+				var d = date.getDate();  //获取日
+				d = d < 10 ? ('0' + d) : d;  //判断日期是否大10
+				return y + '-' + m + '-' + d + ' 12:00:00';  //返回时间格式
+			 }
+			function getCookie(name) {
+				var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+				if (arr = document.cookie.match(reg))
+					return unescape(arr[2]);
+				else
+					return null;
+			}
+		</script>
+	</body>
+</html>

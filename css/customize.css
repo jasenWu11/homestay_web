@@ -1,0 +1,786 @@
+/*总体*/
+/* 占据父页面100% */
+.customize_div100{
+	width: 100%;
+	height: 100%;
+}
+/*去除右侧滚动条*/
+::-webkit-scrollbar{
+	width:0;
+	height:1px;
+}
+::-webkit-scrollbar-thumb{
+	border-radius:5px;
+	-webkit-box-shadow:inset 0 0 5px rgba(0,0,0,.2);
+	background:rgba(0,0,0,.2);
+}
+/*去掉父面板的边距,使iframe覆盖时不出现滚动条*/
+#iframeheight {
+  height: 100%;
+  font-size:0;
+}
+/*加粗比重700*/
+.fw700{
+	font-weight: 700;
+}
+/*白色，透明度50%*/
+.fwtran50{
+	color:rgba(255,255,255,0.5)
+}
+/*设置字体字号*/
+.fs10 {
+    font-size: 10px !important;
+}
+.fs11 {
+    font-size: 11px !important;
+}
+.fs12 {
+    font-size: 12px !important;
+}
+.fs13 {
+    font-size: 13px !important;
+}
+.fs14 {
+    font-size: 14px !important;
+}
+.fs15 {
+    font-size: 15px !important;
+}
+.fs16 {
+    font-size: 16px !important;
+}
+.fs18 {
+    font-size: 18px !important;
+}
+.fs20 {
+    font-size: 20px !important;
+}
+.fs22 {
+    font-size: 22px !important;
+}
+/*设置字体颜色*/
+.fc000 {
+    color: #000000 !important;
+}
+.fc999 {
+    color: #999 !important;
+}
+.fcred {
+    color: #fe4d4d !important;
+}
+.fcblue {
+    color: #70a7e8 !important;
+}
+.fcdeep_blue {
+    color: #007AFF !important;
+}
+.fcgreen {
+    color: #0BB20C !important;
+}
+.fcfff {
+    color: #FFFFFF !important;
+}
+.bceee{
+	background-color: #EEEEEE !important;
+}
+.bcf1f1{
+	background-color: #F1F1F1 !important;
+}
+.bcfff{
+	background-color: #FFFFFF !important;
+}
+.fcdeepgray{
+	color: #5F646E !important;
+}
+.fwb {
+    font-weight: bold !important;
+}
+/*右下阴影*/
+.shadow_rd_4_c4cd4cd{
+	box-shadow: 3px 3px 4px #C4C4C4;
+}
+/*文字居中*/
+.text_center{
+	text-align: center;
+}
+/*文字居左*/
+.text_left{
+	text-align: left;
+}
+/* 控件居中 */
+.ele_center{
+	display:block;
+	margin:0 auto;
+}
+/*首页*/
+/*上面的图片面板部分*/
+/*增加宽度为10的外边框*/
+#customize_margin {
+	margin: 10px;
+}
+#customize_margin5 {
+	margin: 5px;
+}
+.customize_margin_top5 {
+	margin-top: 5px;
+}
+.customize_margin_top10 {
+	margin-top: 10px;
+}
+.customize_marginleft5 {
+	margin-left: 5px;
+}
+#customize_marginleft10 {
+	margin-left: 10px;
+}
+.customize_marginlr5{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.customize_marginlr10{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.customize_paddinglr10{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.customize_paddingtb20{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.customize_text_left5 {
+	margin-left: 5px;
+}
+.customize_text_right5 {
+	margin-right: 5px;
+}
+.customize_text_top5 {
+	margin-top: 5px;
+}
+.customize_text_left10 {
+	margin-left: 10px;
+}
+.customize_text_right10 {
+	margin-right: 10px;
+}
+.customize_text_top10 {
+	margin-top: 10px;
+}
+.customize_text_left15 {
+	margin-left: 15px;
+}
+.customize_text_right15 {
+	margin-right: 15px;
+}
+/*主界面的上部图片*/
+#customize_home_pic {
+	width:100%;
+	height:0;
+	padding-bottom:50%;
+	background-image: url(../images/timg.jpg);
+	no-repeat center top;
+	background-size: 100%;
+	border-radius: 7px;
+}
+/*图片面板的上部*/
+#customize_home_top {
+	width:100%;
+	height:0;
+	padding-bottom:30%;
+}
+/*给图片上部添加边框*/
+#customize_home_top_hide {
+	width:50%;
+	height:0;
+	padding-bottom:5%;
+}
+/*图片面板上部的内容*/
+#customize_home_top_content {
+	width:20%;
+	height:0;
+	padding-bottom:20%;
+	margin:0 auto;
+	text-align: center;
+}
+/*内容的上部*/
+#customize_home_top_content_top {
+	margin-top: 10px;
+	color: #FFFFFF;
+	font-size:3vw;
+}
+/*内容的下部*/
+#customize_home_top_content_bottom {
+	color: #FFFFFF;
+	font-size:10vw;
+}
+/*图片面板的下部*/
+#customize_home_bottom {
+	width:100%;
+	height:0;
+	padding-bottom:20%;
+}
+/*图片面板的下部的子面板*/
+#customize_home_bottom_child {
+	float: left;
+	width:33.3%;
+	height:0;
+	padding-bottom:20%;
+}
+/*图片面板的下部的子面板上面留空*/
+#customize_home_bottom_child_hide {
+	width:50%;
+	height:0;
+	padding-bottom:10%;
+}
+/*图片面板的下部的子面板的内容面板*/
+#customize_home_bottom_child_content {
+	width:50%;
+	height:0;
+	padding-bottom:40%;
+	margin:0 auto;
+	text-align: center;
+}
+/* 图片面板的下部的子面板的内容面板的上部 */
+#customize_home_bottom_child_content_top {
+	margin-top: 5px;
+	color: #FFFFFF;
+	font-size:3vw;
+}
+/*图片面板的下部的子面板的内容面板的下部*/
+#customize_home_bottom_child_content_bottom {
+	color: #FFFFFF;
+	font-size:6vw;
+}
+/*首页搜索界面*/
+#customize_main_search_panel{
+	width: 100%;
+    position: absolute;
+    top: 38px;
+    bottom: 0px;
+    left: 0px;
+	background-color: #FFFFFF;
+}
+/*下面选项卡内部内容*/
+/*站点列表布局边框*/
+.station_list_box {
+    padding: 0px 0px 0px 0px;
+}
+/*行布局格式*/
+ul {
+    padding: 0;
+    margin: 0;
+}
+/*列布局格式*/
+li {
+    list-style: none;
+}
+/*设置后代选择器*/
+.station_list_ul li {
+    position: relative;
+    padding: 10px 0;
+}
+/*固定图片的位置*/
+.station_list_ul li .station_pic {
+    position: absolute;  
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+}
+/*设置图片格式*/
+.station_list_ul li .station_pic img {
+    width: 100px;
+    height: 80px;
+    border-radius: 5px;
+}
+/*固定文字的位置*/
+.station_list_ul li .station_text {
+    padding-left: 110px;
+    position: relative;
+    height: 82px;
+}
+/*文字信息达到自适应屏幕*/
+.station_tl_left {
+    width: 100%;  
+}
+/*列表项标题格式*/
+.station_name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 18px;
+    height: 18px;
+}
+/*文字内容格式,行间距等*/
+.station_comment {
+	margin-top: 5px;
+    line-height: 1.2;
+    height: 28px;
+}
+/*告警文字局底*/
+.station_distance {
+	position: absolute;
+	bottom: 0;
+	margin-bottom: 2px;
+    height: 15px;
+}
+/*设置列表项右上角文字格式*/
+.station_tl_right {
+    position: absolute;  /*使用absolute依据父元素进行定位*/
+    right: 0;
+    top: 0%;           /*使用top:50%使文字达到居中效果*/
+}
+/*管理页面*/
+#customize_management_panel{
+	position: absolute;
+	width: 100%;
+	height: 33.3%;
+	top: 25%;
+}
+.customize_management_panel_pic{
+	background:url(../images/add.png)no-repeat;
+	border:none;
+	width:90px;
+	height:90px;
+	display: block;
+	margin: auto;
+	margin-top: 10px;
+}
+/*我的界面*/
+#customize_mine_panel{
+	width: 100%;
+	height: 38%;
+	background-image: url(../images/mine_back.jpg);
+	no-repeat center top;
+	background-size: 100%;
+}
+#customize_mine_panel_head_and_name{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 40%;
+	height: 40%;
+	top: 30%;
+}
+#customize_mine_panel_head{
+	display: block;
+	margin: auto;
+	width: 56px;
+	height: 56px;
+	background-image: url(../images/head.jpg);
+	no-repeat center top;
+	background-size: 100%;
+	border-radius: 28px;
+}
+#customize_mine_panel_user_account{
+	position:absolute;
+	right:10px;
+	top:10px;
+	z-index:100; 
+}
+#customize_mine_operation{
+	width: 100%;
+	height: 44px;
+	background-color: #FFFFFF;
+	position: relative;
+}
+#customize_mine_operation_prompt{
+	position:absolute;
+	width: 50%;
+	height: 32px;
+	margin-top: 6px;
+	margin-left: 10px;
+	display: flex;
+}
+#customize_mine_operation_icon{
+	width: 16px;
+	height: 16px;
+	margin-top: 8px;
+}
+#customize_mine_operation_text{
+	position:relative;
+	margin-top: 8px;
+}
+#customize_mine_operation_right{
+	position: absolute;  /*使用absolute依据父元素进行定位*/
+    right: 0;
+    margin-top: 14px; 
+}
+.customize_mine_footer{
+	position: absolute;  /*使用absolute依据父元素进行定位*/
+    bottom: 60px;
+}
+/*电站界面*/
+/*电站界面上方图片框架 */
+#customize_station_pic{
+	width: 100%;
+	height:0;
+	padding-bottom:50%;
+	background-image: url(../images/photovoltaic.jpg);
+	no-repeat center top;
+	background-size: 100%;
+	position: relative;
+}
+/*电站界面上方图片顶部提示栏框架*/
+#customize_station_top{
+	width: 100%;
+	height: 27px;
+	background-color: dodgerblue;
+	opacity:0.7;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*电站界面上方图片底部提示栏框架*/
+#customize_station_bottom{
+	width: 100%;
+	height: 25px;
+	position: absolute;
+	bottom: 0;
+}
+/*电站界面上方图片底部左边文字*/
+#customize_station_bottom_left{
+	width: 70%;
+	height: 25px;
+	position: absolute;
+	left: 0;
+	display: flex;
+	align-items: center;
+}
+/*电站界面上方图片底部右边文字*/
+#customize_station_bottom_right{
+	width: 30%;
+	height: 25px;
+	position: absolute;
+	right: 0;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+/* 概览界面 */
+/* 概览文字框架 */
+/* 整行 */
+#customize_station_overview_panel{
+	width: 100%;
+	height: 80px;
+}
+/* 左边 */
+#customize_station_overview_panel_left{
+	width: 50%;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/* 右边 */
+#customize_station_overview_panel_right{
+	width: 50%;
+	height: 80px;
+	position: absolute;
+	right: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/* 整行 */
+#customize_station_overview_panel_all{
+	width: 100%;
+	height: 80px;
+	position: absolute;
+	left: 0;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+/* 设备界面 */
+#customize_station_device{
+	width: 100%;
+	height: 80px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	position: relative;
+}
+#customize_station_device_text_panel{
+	width: 80%;
+	height: 33.3%;
+	display: flex;
+    align-items: center;
+}
+#customize_station_device_state_panel{
+	width: 20%;
+	height: 16px;
+	position: absolute;  /*使用absolute依据父元素进行定位*/
+    right: 10px;
+    top: 6px;    
+	display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+#customize_station_device_alarm_panel{
+	width: 40px;
+	height: 16px;
+	background-color: #EEEEEE;
+	position: absolute;  /*使用absolute依据父元素进行定位*/
+    right: 15px;
+    top: 18px;    
+	display: flex;
+    align-items: center;
+    justify-content:center;
+}
+/* 注册界面 */
+/* 验证码面板 */
+.register_code_panel{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	display: none;
+}
+/* 验证码遮盖全屏的面板 */
+.register_cover_panel{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background-color:#000000;
+	opacity: 0.6;
+	z-index:3;
+}
+/* 验证码弹窗 */
+.register_code_window{
+	height:180px;
+	width: 80%;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	position:relative;
+	margin: 0 auto; /*水平居中*/
+	z-index:4;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/* 忘记密码界面 */
+/* 验证码面板 */
+.password_code_panel{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	z-index: 2;
+	display: none;
+}
+/* 验证码遮盖全屏的面板 */
+.password_cover_panel{
+	position: absolute;
+	top: 0px;
+	height: 100%;
+	width: 100%;
+	background-color:#000000;
+	opacity: 0.6;
+	z-index:3;
+}
+/* 验证码弹窗 */
+.password_code_window{
+	height:180px;
+	width: 80%;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	position:relative;
+	margin: 0 auto; /*水平居中*/
+	z-index:4;
+	top: 50%;
+	transform: translateY(-50%);
+}
+/*新增站点*/
+.add_station_title{
+	height: 15px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 10px;
+	margin-bottom: -10px;
+}
+.add_station_title_view{
+	width: 3px;
+	height: 90%;
+	background-color: dodgerblue;
+	margin-right: 5px;
+}
+/* 设备界面 */
+#customize_station_device{
+	width: 100%;
+	height: 80px;
+	background-color: #FFFFFF;
+	border-radius: 4px;
+	margin-bottom: 10px;
+	position: relative;
+}
+#customize_station_device_text_panel{
+	width: 80%;
+	height: 33.3%;
+	display: flex;
+    align-items: center;
+}
+#customize_station_device_state_panel{
+	width: 20%;
+	height: 16px;
+	position: absolute;  /*使用absolute依据父元素进行定位*/
+    right: 10px;
+    top: 6px;    
+	display: flex;
+    align-items: center;
+    justify-content:flex-end;
+}
+#customize_station_device_alarm_panel{
+	width: 40px;
+	height: 16px;
+	background-color: #EEEEEE;
+	position: absolute;  /*使用absolute依据父元素进行定位*/
+    right: 15px;
+    top: 18px;    
+	display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.station_runningdays{
+  height: 20px;
+  float: right;
+  display: flex;
+  flex-direction:row;
+  align-items:center;
+  justify-content: flex-end;
+  font-size: 12px;
+}
+.device_list_item{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 10px 10px;
+  border-radius: 8px;
+  border-style: solid; border-width: 0.5px;
+  border-color: #999999;
+  overflow: hidden; 
+}
+.device_list_item .list_top{
+  height:32px;
+  /* background-color: #2ad300; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 10px;
+  justify-content: space-between;
+}
+.device_list_item .list_top .title_text{
+  font-size: 12px;
+  color: #ffffff;
+}
+.device_list_item .list_top .signal_img{
+  height: 21px;
+  width: 21px;
+}
+.device_list_item .list_bottom{
+  display: flex;
+  flex-direction: column;
+  padding: 5px 7px 5px 7px;
+  overflow: hidden; 
+}
+.device_list_item .list_bottom_null{
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 7px 5px 7px;
+  overflow: hidden; 
+  font-size: 14px;
+}
+.device_list_item .list_bottom .list_desc{
+  color: #000000;
+  font-size: 14px;
+}
+.alarm_list_confirm{
+  float: right;
+}
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  position: relative;
+  height: 270px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding-bottom: 15px;
+}
+.page_charts_panel {
+  padding-top: 20px;
+  background-color: #ffffff
+}
+.service-item{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  background-color: #fff;
+  margin: 0px 8px 8px 8px;
+  border-radius: 5px;
+}
+.service-item{
+  display: flex;
+  display: -webkit-flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 0px 5px 5px 5px;
+  border-radius: 5px;
+}
+.service-item .service-base{
+  display: flex;
+  flex-direction: column;
+  height: 35px;
+  padding: 5px 10px;
+  justify-content:center;
+  text-align: left;
+}
+.service-item .service-base .station_title{
+  color: #4491b8;
+  font-size: 15px;
+}
+.service-item .service-base .station_city{
+  color: #747272;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+.service-item .service-line{
+  width: 100%;
+  height: 0;
+  border-bottom: #d8d6d6 0.5px dashed;
+}
+.service-item .service-detail{
+  height: 110px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  display: -webkit-box;
+}
+.service-item .service-detail .station_img{
+  height: 100px;
+  width: 150px;
+}
+.service-item .service-detail .station_describe{
+  height: 100px;
+  display: -webkit-box;
+  -webkit-box-flex: 1;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content:space-around;
+}
+.service-item .service-detail .station_describe .text{
+  font-size: 12px;
+  color: #000000
+}
